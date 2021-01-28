@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Source+Sans+Pro:ital,wght@0,200;0,400;1,200;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <div class="chat-box">
+            <div class="left-view"></div>
+            <div class="right-view">
+                <div class="chat-list">
+                    <!-- <div class="chat left">Hey guys</div>
+                    <div class="chat left">who's there?</div>
+                    <div class="join">admin joined chat</div>
+                    <div class="chat right">How are you all?</div>
+                    <div class="leave">admin left the chat</div>
+                    <div class="chat left">Hello everyone</div>
+                    <div class="chat right">let's meet</div> -->
+                </div>
+                <div class="chat-send">
+                    <input type="text" id="chat-message" placeholder="Type a message...">
+                    <div class="send-button" id="send-chat">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.0/socket.io.js" integrity="sha512-+l9L4lMTFNy3dEglQpprf7jQBhQsQ3/WvOnjaN/+/L4i0jOstgScV0q2TjfvRF4V+ZePMDuZYIQtg5T4MKr+MQ==" crossorigin="anonymous"></script>
+    <script>
+        const socket = io.connect("http://localhost:3000");
+    </script>
+    <script src="./script.js"></script>
+    <script src="./socket.js"></script>
+</body>
+</html>
