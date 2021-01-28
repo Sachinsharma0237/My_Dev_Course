@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!---Style File is Linked-->
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div class="menu">
+        <div class="file active">File</div>
+        <div class="home">Home</div>
+    </div>
+
+    <div class="menu-options">
+        <div class="file-menu-options">
+        <div class="new">New</div>    
+        <div class="open">Open</div> 
+        <div class="save">Save</div>  
+        <div class="undo" id="myColor">
+            <img src="./resources-master/resources-master/NewIcons/Undo.svg" alt="">
+        </div>
+        <div class="redo" id="myColor">
+            <img src="./resources-master/resources-master/NewIcons/Redo.svg" alt="">
+        </div>
+        <div class="print">
+            <img src="./workplace/png/008-printer.png" alt="">
+        </div>
+        <div class="copy">
+            <img src="./workplace/png/copy.png" alt="">
+        </div>
+        <div class="paste">
+            <img src="./resources-master/resources-master/NewIcons/paste.svg" alt="">
+        </div>
+        <div class="cut">
+            <img src="./resources-master/resources-master/NewIcons/cut.svg" alt="">
+        </div>
+        <div class="insert">
+            <img src="./resources-master/resources-master/NewIcons/Photo.svg" alt="">
+        </div>
+        <div class="sticky-notes">
+            <img src="./resources-master/resources-master/NewIcons/StickyNote.svg" alt="">
+        </div>
+        </div>
+        <div class="home-menu-options hide">
+
+            <div class="home-menu one">
+                <select name="font" id="font-select">
+                    <option value="arial">Arial</option>
+                    <option value="impact">Impact</option>
+                    <option value="cursive">Cursive</option>
+                    <option value="verdana">Verdana</option>
+                    <option value="avantgarde">Avantgarde</option>
+                    <option value="times">Times</option>
+                    <option value="OCR A Std">OCR A Std</option>
+                    <option value="brush script mt">Brush Script MT</option>
+                </select>
+                <div class="font-styles">
+                    <button class="bold">B</button>
+                    <button class="underline">U</button>
+                    <button class="italic">I</button>
+                </div>
+            </div>
+            <div class="home-menu two">
+                <select name="font-size" id="font-size">
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="12">12</option>    
+                    <option value="14">14</option>    
+                    <option value="16" selected="selected" >16</option>
+                    <option value="20">20</option>
+                    <option value="24">24</option>
+                    <option value="28">28</option>
+                    <option value="32">32</option>
+                    <option value="36">36</option>
+                    <option value="40">40</option>
+                </select>
+                <div class="font-color">
+                    <input type="color" id="cell-font-color">
+                    <input type="color" id="cell-color">
+                </div>
+            </div>
+            <div class="home-menu three">
+                <div class="font-alignment">
+                    <button class="left">L</button>
+                    <button class="centre">C</button>
+                    <button class="right">R</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="formula">
+        <input type="text" id = "address" disabled>
+        <input type="text" id = "formula">    
+    </div>
+
+    <div class="content">
+
+        <!--Top Left Cell-->
+        <div class="top-left-cell"></div>
+        <!--Top Row-->
+        <div class="top-row">
+            <!--26-->
+            <%for(let j = 0; j < 26; j++){%>
+                <div class="top-row-cell" cellId = <%=j%> ><%= String.fromCharCode(65+j)%></div>
+            <%}%>
+
+        </div>
+
+        <!--Left Col-->
+        <div class="left-col">
+            <!--100-->
+            <%for(let i = 0; i < 100; i++){%>
+                <div class="left-col-cell" cellId = <%= i%>><%= i+1%></div>
+            <%}%>
+        </div>
+
+        <!--Cells-->
+        <div class="cells">
+                <%for(let i = 0; i < 100; i++){%>
+                    <div class="row">
+                        <%for(let j = 0; j < 26; j++){%>
+                            <div contenteditable="true" class="cell" rowId = <%=i%> colId = <%=j%> ></div>
+                        <%}%>
+                    </div>
+                <%}%>   
+        </div>
+    </div>
+    
+    <div class="sheets">
+        <div class="sheets-list">
+            <div class="sheet active-sheet" sid="0">Sheet 1</div>
+        </div>
+        <div class="sheet-add" id="mySheet"><i class="fas fa-plus-circle"></i></div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
