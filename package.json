@@ -1,0 +1,25 @@
+{
+  "name": "DEV_1_DEC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sachinsharma0237/DEV_1_DEC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sachinsharma0237/DEV_1_DEC/issues"
+  },
+  "homepage": "https://github.com/Sachinsharma0237/DEV_1_DEC#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "puppeteer": "^5.5.0",
+    "request": "^2.88.2"
+  }
+}
