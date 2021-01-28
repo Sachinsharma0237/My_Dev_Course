@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.tools-content{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tools{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 80%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.175);
+}
+.tool{
+    height: 50px;
+    position: relative;
+}
+.tool img{
+    height: 100%;
+}
+.canvas{
+    height: calc(100vh - 100px);  
+}
+#canvas{
+}
+.active-tool{
+    background: lightgray;
+    border-radius: 100%;
+    padding: 7px;
+    height: 65px;
+}
+.tool-options{
+    position: absolute;
+    height: 130px;
+    width: 162px;
+    background: lightblue;
+    top: 73px;
+    left: -57px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tool-options input{
+}
+.pencil-colors{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.pencil-colors div{
+    height: 30px;
+    width: 28px;
+    border-radius: 50%;
+}
+.black{
+    background: black;
+}
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
+.blue{
+    background: blue;
+}
+.yellow{
+    background: yellow;
+}
+.sticky{
+    position: absolute;
+    left: 300px;
+    top: 200px;
+}
+.sticky-header{
+    height: 30px;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.minimize{
+    height: 20px;
+    width: 20px;
+    background: orange;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 0px;
+    text-align: center;
+    cursor: pointer;
+}
+.close{
+    height: 20px;
+    width: 20px;
+    background: red;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.sticky-content{
+    
+}
+#sticky-text{
+    outline: none;
+    border: 1px solid lightgrey;
+}
+.confirm-close{
+position: absolute;
+display: flex;
+right: 3px;
+top: 34px;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.yes{
+    position: absolute;
+    width: 27px;
+    top: 24px;
+    right: 66px;
+    height: 20px;
+}
+.no{
+position: absolute;
+width: 28px;
+top: 24px;
+right: 36px;
+height: 20px;
+}
+#zoom-in{
+    
+}
+#zoom-out{
+
+}
+.hide{
+    display: none;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tools-content">
+        <div class="tools">
+        <div class="tool active-tool" id="pencil">
+            <img src="./resources-master/resources-master/NewIcons/Black_Pencil.svg" alt="">
+            <div class="tool-options hide" id="pencil-options">
+            <input type="range" name="pencil-size" id="pencil-size" value="1" min="1" max="40">
+            <div class="pencil-colors">
+                <div class="black"></div>
+                <div class="red"></div>
+                <div class="green"></div>
+                <div class="blue"></div>
+                <div class="yellow"></div>
+            </div>
+           </div>
+        </div>
+        <div class="tool" id="eraser">
+            <img src="./resources-master/resources-master/NewIcons/Eraser.svg" alt="">
+            
+            <div class="tool-options hide" id="eraser-options">
+                <input type="range" name="eraser-size" id="eraser-size" value="1" min="1" max="40">
+            </div>    
+
+        </div>
+        <div class="tool" id="sticky">
+            <img src="./resources-master/resources-master/NewIcons/StickyNote.svg" alt="">
+        </div>
+        <div class="tool" id="photo">
+            <img src="./resources-master/resources-master/NewIcons/Photo.svg" alt="">
+            <input type="file" name="" id="photo-upload" style="display: none;">
+        </div>
+        <div class="tool" id="download">
+            <img src="./resources-master/resources-master/NewIcons/Download.svg" alt="">
+        </div>
+        <div class="tool" id="undo">
+            <img src="./resources-master/resources-master/NewIcons/Undo.svg" alt="">
+        </div>
+        <div class="tool" id="redo">
+            <img src="./resources-master/resources-master/NewIcons/Redo.svg" alt="">
+        </div>
+        <div class="tool" id = "zoom-in">
+            <img src="./resources-master/resources-master/NewIcons/zoom-in-plus.svg" alt="">
+        </div>
+        <div class="tool" id = "zoom-out">
+            <img src="./resources-master/resources-master/NewIcons/zoom-out-minus.svg" alt="">
+        </div>
+        </div>
+    </div>
+    <div class="canvas">
+        <canvas id="canvas"></canvas>
+    </div>
+    <!--NPM install aur ye link ek hi chizz hai pura socket.io ka code hai, socket.io ka code dono jagha chyie-->
+    <!--Server side me humne install kr diya ye client side haii yha humne link daal diya ya pura code likh do script tag me-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js" integrity="sha512-2rUSTSAeOO02jF6eBqENNqPs1EohenJ5j+1dgDPdXSLz9nOlrr8DJk4zW/lDy8rjhGCSonW3Gx812XJQIKZKJQ==" crossorigin="anonymous"></script>
+    <script>
+        const socket = io.connect("http://localhost:3000");
+    </script>
+
+    <script src="./script.js"></script>
+    <script src="./tools.js"></script>
+    <script src="./sticky.js"></script>
+    <script src="./util.js"></script>
+    <script src="./img.js" ></script>
+    <script src="./socket.js"></script>
+</body>
+</html>
