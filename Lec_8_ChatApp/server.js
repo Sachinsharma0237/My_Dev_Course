@@ -11,13 +11,15 @@ io.on('connection', function(socket){
     console.log(`connected at socket ${socket.id}`);
     users.push({ id:socket.id });
     socket.on("join", function(userName){
+        let obj;
         for(let i = 0; i < users.length; i++){
             if(users[i].id == socket.id){
                 users[i].userName = userName;
+                obj = users[i];
                 break;
             }
         }
-        socket.broadcast.emit("chat-join", userName);
+        socket.broadcast.emit("chat-join", obj);
     });
     socket.on("chat", function(message){
         let userName;

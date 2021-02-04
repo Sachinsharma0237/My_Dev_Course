@@ -1,0 +1,44 @@
+.h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#myContent{
+    display: flex;
+}
+.sites div{
+    max-height: 30px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.btn.btn-outline-danger{
+    max-width: 30px;
+    max-height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    background: #F61F1F;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+}
+.time{
+    max-width: 30px;
+    max-height: 50px;
+    margin: 5px;
+}
+.remain{
+    margin: 15px;
+    background: orange;
+    color: white;
+    font-weight: bolder;
+    min-width: 30px;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
