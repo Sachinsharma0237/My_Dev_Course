@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Sachinsharma0237/DEV_1_DEC#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "mongoose": "^5.11.15",
     "puppeteer": "^5.5.0",
     "request": "^2.88.2"
   }
