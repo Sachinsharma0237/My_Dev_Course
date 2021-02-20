@@ -7,7 +7,7 @@ const userRouter = require("./router/userRouter");
 const app = express();
 
 
-
+app.use(  express.json() );
 
 // for all the user related functions navigate to userRouter;
 app.use("/api/user" , userRouter);
